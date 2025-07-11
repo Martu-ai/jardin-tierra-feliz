@@ -1,0 +1,341 @@
+/* === RESET Y BASE === */
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  padding: 0; /* sin márgenes blancos */
+}
+
+/* NUEVO: contenedor centrado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* opcional: margen interno para no pegarse a los bordes */
+}
+
+/* === NAV === */
+nav {
+  background-color: rgb(65, 103, 184);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.links a {
+  color: #d6d6d6;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: white;
+}
+
+/* === HERO === */
+.hero {
+  background: linear-gradient(0deg, #00000079, #0000009c),
+    url("WhatsApp Image 2025-05-23 at 11.58.56 (1).jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cta {
+  color: white;
+}
+
+.cta h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin-bottom: 0.75rem;
+}
+
+.cta a {
+  background-color: rgb(65, 103, 184);
+  padding: 0.625rem 2rem;
+  border-radius: 1.75rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.verde {
+  color: rgb(65, 103, 184);
+}
+
+/* === SECCIONES DENTRO DEL CONTAINER === */
+.descripcion {
+  margin: 3.75rem 0;
+}
+
+.descripcion h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  text-decoration: underline;
+}
+
+.informacion {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.info:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.info img {
+  width: clamp(120px, 20vw, 160px);
+}
+
+/* Jornadas */
+.Informacion {
+  background-color: rgb(65, 103, 184);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cartas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.carta {
+  background-color: white;
+  color: rgb(65, 103, 184);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.carta .precio {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.carta a {
+  background-color: rgb(65, 103, 184);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.carta a:hover {
+  background-color: rgb(112, 131, 172);
+}
+
+/* Galería */
+.galeria {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.fotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.fotos img {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  height: 180px;
+}
+
+/* Testimonio y Contacto */
+.testimonio,
+.contacto {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.testimonio form,
+.contacto form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+textarea {
+  resize: vertical;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+}
+
+form button {
+  background-color: rgb(65, 103, 184);
+  color: white;
+  border: none;
+  padding: 0.625rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: rgb(112, 131, 172);
+}
+
+/* Mapa */
+.mapa {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.mapa iframe {
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(6, 2, 37);
+  color: white;
+}
+
+footer .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+footer .iconos {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .iconos svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+footer .links {
+  background-color: rgb(65, 103, 184);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem;
+}
+
+footer .links ul {
+  list-style: none;
+}
+
+footer .links ul li:first-child {
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.321);
+}
+
+.copy {
+  background-color: black;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Mobile First Toggle Nav */
+.menu-toggle {
+  display: block;
+}
+
+.links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background: rgb(65, 103, 184);
+  padding: 1rem 0;
+}
+
+.links.active {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .info {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .links {
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    padding: 0;
+  }
+}
